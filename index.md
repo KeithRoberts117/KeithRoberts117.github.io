@@ -7,5 +7,4 @@ author_profile: true
 
 Welcome to my personal academic website!
 
-![Test Image](/assets/images/profile.jpg)
 
