@@ -2,7 +2,7 @@
 
 ---
 layout: single
-title: Home
+title: "Home"
 author_profile: true
 ---
 
