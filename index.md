@@ -4,6 +4,7 @@ title: "Home"
 author_profile: true
 ---
 
-Welcome to my website !
+Welcome to my website.
+Im so glad you're here :)
 
 
