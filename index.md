@@ -1,10 +1,9 @@
 ---
-layout: single
-title: "Home"
+layout: home
 author_profile: true
 ---
 
+This is a test homepage.
 
-Welcome to my personal academic website!
-
+If you see a sidebar with your name, avatar, and links → Minimal Mistakes is working.
 
