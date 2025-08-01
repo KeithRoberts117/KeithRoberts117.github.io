@@ -14,10 +14,22 @@ plugins:
 # Author info (for sidebar/profile)
 author:
   name: "Keith Roberts"
-# avatar: ""
-  bio: "PhD Candidate - McMaster Univesity"
+  avatar: "/assets/images/profile.png"
+  bio: "PhD Candidate – McMaster University"
   location: "Hamilton, Canada"
   email: "roberk40@mcmaster.ca"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "roberk40@mcmaster.ca"
+    - #label: "Google Scholar"
+      #icon: "ai ai-google-scholar"
+      #url: "https://scholar.google.com/..."
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/KeithRoberts117"
+
+
 
 # Defaults for pages
 defaults:
