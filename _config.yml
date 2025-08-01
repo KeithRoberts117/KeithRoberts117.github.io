@@ -21,10 +21,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-envelope"
-      url: "roberk40@mcmaster.ca"
-    - #label: "Google Scholar"
-      #icon: "ai ai-google-scholar"
-      #url: "https://scholar.google.com/..."
+      url: "mailto:roberk40@mcmaster.ca"
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/KeithRoberts117"
