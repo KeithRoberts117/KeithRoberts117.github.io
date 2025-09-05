@@ -1,4 +1,7 @@
-/* Force avatar to be square for sidebar/profile */
+/* Override Minimal Mistakes avatar style */
 .author__avatar {
-  border-radius: 0 !important;
+  border-radius: 0 !important; /* Remove circular mask */
+  width: 150px; /* Or your preferred size */
+  height: 150px; /* Make sure it's square */
+  object-fit: cover; /* Ensures image fills the box */
 }
