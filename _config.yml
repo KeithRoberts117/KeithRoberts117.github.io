@@ -11,6 +11,10 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 plugins:
   - jekyll-include-cache
 
+# Custom CSS
+include:
+  - assets/css/custom.css
+
 # Author info (for sidebar/profile)
 author:
   name: "Keith Roberts"
@@ -25,7 +29,6 @@ author:
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/KeithRoberts117"
-
 
 
 # Defaults for pages
