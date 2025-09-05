@@ -1,26 +1,17 @@
 <style>
-/* Make sidebar wider (desktop) */
-@media (min-width: 1025px) {
-  .sidebar {
-    width: 340px !important;   /* adjust to taste */
-  }
-}
-
-/* Center the avatar wrapper and remove any rounding */
+/* Center the wrapper and allow clean cropping */
 .sidebar .author__avatar,
 .author__avatar {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  text-align: center !important;
-  margin: 0 auto !important;
   width: 100% !important;
-  max-width: none !important;
+  margin: 0 auto !important;
   border-radius: 0 !important;
   overflow: hidden !important;
 }
 
-/* Force the image to be square, centered, and un-rounded */
+/* Force the image to be a perfect square and un-rounded */
 html body .sidebar .author__avatar a.u-url img.u-photo,
 html body .sidebar .author__avatar img.u-photo,
 html body .sidebar .author__avatar img,
@@ -28,21 +19,12 @@ html body .author__avatar a.u-url img.u-photo,
 html body .author__avatar img.u-photo,
 html body .author__avatar img {
   display: block !important;
-  margin: 0 auto !important;
-  width: 220px !important;      /* change size here */
-  height: 220px !important;     /* same value => square */
+  width: 220px !important;   /* change this number to your target size */
+  height: 220px !important;  /* same value => square */
   aspect-ratio: 1 / 1 !important;
   object-fit: cover !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-}
-
-/* Mobile: shrink avatar so it doesn't dominate */
-@media (max-width: 600px) {
-  .sidebar .author__avatar img,
-  .author__avatar img {
-    width: 140px !important;
-    height: 140px !important;
-  }
+  margin: 0 auto !important;
 }
 </style>
