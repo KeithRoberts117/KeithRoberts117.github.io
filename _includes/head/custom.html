@@ -1,43 +1,48 @@
 <style>
-.author__avatar {
-  max-width: none !important;   /* remove theme limit */
-  width: auto !important;       /* let the image set size */
-}
-  
-  /* Make the avatar a true square and remove rounding */
-.author__avatar img,
-img.u-photo,
-.sidebar .author__avatar img {
-  width: 150px !important;         /* equal width & height => square box */
-  height: 150px !important;
-  aspect-ratio: 1 / 1 !important;  /* extra safety on modern browsers */
-  object-fit: cover !important;    /* fill square without distortion */
-  border-radius: 0 !important;     /* no circle */
-  box-shadow: none !important;     /* optional: remove ring */
+/* Make sidebar wider (desktop) */
+@media (min-width: 1025px) {
+  .sidebar {
+    width: 340px !important;   /* adjust to taste */
+  }
 }
 
-/* Also nuke rounding on the wrapper in case the theme applies it */
-.author__avatar,
-.sidebar .author__avatar {
-  border-radius: 0 !important;
-  overflow: hidden;                 /* trims any overflow neatly */
-}
-
-  .sidebar .author__avatar,
+/* Center the avatar wrapper and remove any rounding */
+.sidebar .author__avatar,
 .author__avatar {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   text-align: center !important;
   margin: 0 auto !important;
-  width: 100% !important;   /* ensures wrapper fills sidebar width */
+  width: 100% !important;
+  max-width: none !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
 }
 
-/* Center the image inside */
-.sidebar .author__avatar img,
-.author__avatar img {
+/* Force the image to be square, centered, and un-rounded */
+html body .sidebar .author__avatar a.u-url img.u-photo,
+html body .sidebar .author__avatar img.u-photo,
+html body .sidebar .author__avatar img,
+html body .author__avatar a.u-url img.u-photo,
+html body .author__avatar img.u-photo,
+html body .author__avatar img {
   display: block !important;
   margin: 0 auto !important;
+  width: 220px !important;      /* change size here */
+  height: 220px !important;     /* same value => square */
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Mobile: shrink avatar so it doesn't dominate */
+@media (max-width: 600px) {
+  .sidebar .author__avatar img,
+  .author__avatar img {
+    width: 140px !important;
+    height: 140px !important;
+  }
 }
 </style>
-
