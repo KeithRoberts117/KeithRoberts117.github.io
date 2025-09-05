@@ -1,21 +1,23 @@
 <style>
-/* Make the avatar a true square and remove rounding */
+/* Larger, square avatar */
 .author__avatar img,
 img.u-photo,
 .sidebar .author__avatar img {
-  width: 50px !important;         /* equal width & height => square box */
-  height: 50px !important;
-  aspect-ratio: 1 / 1 !important;  /* extra safety on modern browsers */
-  object-fit: cover !important;    /* fill square without distortion */
-  border-radius: 0 !important;     /* no circle */
-  box-shadow: none !important;     /* optional: remove ring */
+  width: 300px !important;   /* bump up from 150px */
+  height: 300px !important;  /* keep square */
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
-/* Also nuke rounding on the wrapper in case the theme applies it */
+/* Keep wrapper consistent */
 .author__avatar,
 .sidebar .author__avatar {
   border-radius: 0 !important;
-  overflow: hidden;                 /* trims any overflow neatly */
+  overflow: hidden;
+  max-width: 100%;           /* prevent overflow */
+  margin: 0 auto;            /* center in sidebar */
 }
 </style>
 
