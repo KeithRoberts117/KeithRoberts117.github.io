@@ -1,23 +1,23 @@
 <style>
-
-.author__avatar { 
+/* Remove theme’s built-in constraints */
+.author__avatar {
   max-width: none !important;
   width: auto !important;
   border-radius: 0 !important;
-  overflow: hidden !important;
+  overflow: hidden !important; /* crop anything spilling outside */
 }
-/* Enlarge image, square avatar */
+
+/* Force the image to be square */
 .author__avatar img,
 img.u-photo,
 .sidebar .author__avatar img {
-  width: 220px !important;   /* bump up from 150px */
-  height: 220px !important;  /* keep square */
+  width: 200px !important;       /* pick your size */
+  height: 200px !important;      /* same value = square */
   aspect-ratio: 1 / 1 !important;
-  object-fit: cover !important;
+  object-fit: cover !important;  /* crop instead of squish */
+  border-radius: 0 !important;
   box-shadow: none !important;
   display: block;
   margin: 0 auto;
 }
-
 </style>
-
