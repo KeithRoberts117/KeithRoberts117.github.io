@@ -1,9 +1,21 @@
 <style>
-.author__avatar img {
-  border-radius: 0 !important;
-  width: 150px !important;
+/* Make the avatar a true square and remove rounding */
+.author__avatar img,
+img.u-photo,
+.sidebar .author__avatar img {
+  width: 150px !important;         /* equal width & height => square box */
   height: 150px !important;
-  object-fit: cover !important;
-  box-shadow: none !important;
+  aspect-ratio: 1 / 1 !important;  /* extra safety on modern browsers */
+  object-fit: cover !important;    /* fill square without distortion */
+  border-radius: 0 !important;     /* no circle */
+  box-shadow: none !important;     /* optional: remove ring */
+}
+
+/* Also nuke rounding on the wrapper in case the theme applies it */
+.author__avatar,
+.sidebar .author__avatar {
+  border-radius: 0 !important;
+  overflow: hidden;                 /* trims any overflow neatly */
 }
 </style>
+
