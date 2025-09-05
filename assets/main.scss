@@ -1,11 +1,52 @@
 ---
-# Only the dashes are needed for Jekyll to treat it as SCSS
+# Jekyll front matter — required for SCSS processing
 ---
 
+/* Import the theme’s skin and base styles */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* Your overrides below */
+/* === Custom overrides === */
+
+/* Sidebar width */
 .sidebar {
-  width: 350px !important;  /* wider sidebar */
+  width: 340px !important;   /* wider than the default 300px */
 }
+
+/* Author avatar wrapper */
+.sidebar .author__avatar,
+.author__avatar {
+  max-width: none !important;
+  width: 100% !important;         /* let it stretch full width of sidebar */
+  border-radius: 0 !important;
+  overflow: hidden !important;    /* crop neatly */
+  display: flex !important;       /* center contents */
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+/* Author avatar image */
+.sidebar .author__avatar img,
+.author__avatar img,
+img.u-photo {
+  display: block !important;
+  margin: 0 auto !important;
+  width: 220px !important;       /* pick your preferred size */
+  height: 220px !important;      /* equal width & height => square */
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;  /* crop rectangular source */
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Mobile: shrink avatar a bit so it doesn’t dominate */
+@media (max-width: 600px) {
+  .sidebar .author__avatar img,
+  .author__avatar img {
+    width: 140px !important;
+    height: 140px !important;
+  }
+}
+
