@@ -27,4 +27,32 @@ html body .author__avatar img {
   box-shadow: none !important;
   margin: 0 auto !important;
 }
+
+  <style>
+/* Center the wrapper */
+.sidebar .author__avatar,
+.author__avatar {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Square + centered avatar that scales up safely inside the default sidebar */
+.sidebar .author__avatar img,
+.author__avatar img {
+  display: block !important;
+  margin: 0 auto !important;
+  width: min(95%, 240px) !important;   /* fills most of the sidebar, caps at 240 */
+  aspect-ratio: 1 / 1 !important;      /* guarantees a square */
+  height: auto !important;             /* computed from aspect-ratio */
+  object-fit: cover !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+</style>
+
 </style>
