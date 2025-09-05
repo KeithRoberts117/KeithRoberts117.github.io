@@ -1,0 +1,4 @@
+/* Force avatar to be square for sidebar/profile */
+.author__avatar {
+  border-radius: 0 !important;
+}
