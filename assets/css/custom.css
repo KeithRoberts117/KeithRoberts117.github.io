@@ -1,7 +1,8 @@
 /* Override Minimal Mistakes avatar style */
-.author__avatar {
+.author__avatar img {
   border-radius: 0 !important; /* Remove circular mask */
   width: 150px; /* Or your preferred size */
   height: 150px; /* Make sure it's square */
-  object-fit: cover; /* Ensures image fills the box */
+  object-fit: cover !important; /* Ensures image fills the box */
+  box-shadow: none !important
 }
