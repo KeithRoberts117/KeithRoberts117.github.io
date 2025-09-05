@@ -1,0 +1,11 @@
+---
+# Only the dashes are needed for Jekyll to treat it as SCSS
+---
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* Your overrides below */
+.sidebar {
+  width: 350px !important;  /* wider sidebar */
+}
