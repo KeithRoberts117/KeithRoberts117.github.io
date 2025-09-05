@@ -1,23 +1,26 @@
 <style>
-/* Remove theme’s built-in constraints */
 .author__avatar {
-  max-width: none !important;
-  width: auto !important;
-  border-radius: 0 !important;
-  overflow: hidden !important; /* crop anything spilling outside */
+  max-width: none !important;   /* remove theme limit */
+  width: auto !important;       /* let the image set size */
 }
-
-/* Force the image to be square */
+  
+  /* Make the avatar a true square and remove rounding */
 .author__avatar img,
 img.u-photo,
 .sidebar .author__avatar img {
-  width: 200px !important;       /* pick your size */
-  height: 200px !important;      /* same value = square */
-  aspect-ratio: 1 / 1 !important;
-  object-fit: cover !important;  /* crop instead of squish */
+  width: 150px !important;         /* equal width & height => square box */
+  height: 150px !important;
+  aspect-ratio: 1 / 1 !important;  /* extra safety on modern browsers */
+  object-fit: cover !important;    /* fill square without distortion */
+  border-radius: 0 !important;     /* no circle */
+  box-shadow: none !important;     /* optional: remove ring */
+}
+
+/* Also nuke rounding on the wrapper in case the theme applies it */
+.author__avatar,
+.sidebar .author__avatar {
   border-radius: 0 !important;
-  box-shadow: none !important;
-  display: block;
-  margin: 0 auto;
+  overflow: hidden;                 /* trims any overflow neatly */
 }
 </style>
+
