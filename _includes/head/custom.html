@@ -11,33 +11,6 @@
   overflow: hidden !important;
 }
 
-/* Force the image to be a perfect square and un-rounded */
-html body .sidebar .author__avatar a.u-url img.u-photo,
-html body .sidebar .author__avatar img.u-photo,
-html body .sidebar .author__avatar img,
-html body .author__avatar a.u-url img.u-photo,
-html body .author__avatar img.u-photo,
-html body .author__avatar img {
-  display: block !important;
-  width: 220px !important;   /* change this number to your target size */
-  height: 220px !important;  /* same value => square */
-  aspect-ratio: 1 / 1 !important;
-  object-fit: cover !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-}
-
-/* Center the wrapper */
-.sidebar .author__avatar,
-.author__avatar {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: 100% !important;
-  border-radius: 0 !important;
-  overflow: hidden !important;
-}
-
 /* Square + centered avatar that scales up safely inside the default sidebar */
 .sidebar .author__avatar img,
 .author__avatar img {
