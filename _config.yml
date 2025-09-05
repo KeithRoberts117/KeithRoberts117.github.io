@@ -8,13 +8,6 @@ baseurl: ""
 # Theme settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
-minimal_mistakes_skin: "default"
-assets:
-  css:
-    - "/assets/css/custom.css"
-include:
-  - assets/css/custom.css
-
 plugins:
   - jekyll-include-cache
 
